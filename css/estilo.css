@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn a{
+    color:rgb(250, 235, 215) ;
+    text-decoration: none;
+}
+
+a{
+    color:rgb(250, 235, 215) ;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(13, 105, 13, 0.788);
+    text-align: center;
+    overflow: hidden;
+}
+
+#titulo1 {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#titulo {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+h1,
+h2 {
+    color: antiquewhite;
+}
+
+.index{
+    margin: auto;
+    background-color: rgba(13, 105, 13, 0.548);
+    box-shadow: 10px 10px 38px 10px rgba(0, 0, 0, 0.685);
+    margin-top: 20vh;
+    width: 60vw;
+    height: 60vh;
+}
+
+.tablero{
+    margin: auto;
+    background-color: rgba(13, 105, 13, 0.548);
+    box-shadow: 10px 10px 38px 10px rgba(0, 0, 0, 0.685);
+    margin-top: 2vw;
+    width: 80vw;
+    height: 90vh;
+}
+
+#btnTablero {
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.btn-warning{
+    color: antiquewhite;
+    border: none;
+    background-color: goldenrod;
+    transition: all .6s;
+}
+
+#girar:hover{
+    text-decoration: none;
+    transform: scale(1.3);
+}
+
+.container {
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: -6%;
+    width: 70%;
+    height: 80%;
+}
+
+.num {  
+    padding-top: 4%;
+    text-align: center;
+    height: 100px;
+    font-size: 1.2rem;
+}
+
+.grupos {
+    height: 50px;
+    padding-top: 1%;
+    font-size: 1.2rem;
+    border: solid rgba(250, 235, 215, 0.849);
+    color: antiquewhite;
+}
+
+.numero1,
+.numero3,
+.numero5,
+.numero7,
+.numero9,
+.numero12,
+.numero14,
+.numero16,
+.numero18,
+.numero19,
+.numero21,
+.numero23,
+.numero25,
+.numero27,
+.numero30,
+.numero32,
+.numero34,
+.numero36,
+.rojo {
+    border: solid rgba(250, 235, 215, 0.849);
+    background-color: red;
+    color: antiquewhite
+}
+
+.numero2,
+.numero4,
+.numero6,
+.numero8,
+.numero10,
+.numero11,
+.numero13,
+.numero15,
+.numero17,
+.numero20,
+.numero22,
+.numero24,
+.numero26,
+.numero28,
+.numero29,
+.numero31,
+.numero33,
+.numero35,
+.negro {
+    border: solid rgba(250, 235, 215, 0.849);
+    background-color: black;
+    color: antiquewhite
+}
+
+.par,
+.impar,
+.numero0 {
+    color: black;
+    font-weight: bold;
+    background-color: green;
+}
+
+#buttons form {
+    margin: auto;
+    margin-top: 2vw;
+    width: 50%;
+}
+.num,.grupos{
+    transition: all .5s;
+}
+
+.num:hover, .grupos:hover{
+    border: solid blue;
+    transform: scale(1.1,1.1)
+}
+
+#datos h2{
+    margin:auto
+}
+
+#fichas{
+    opacity: .6;
+    transition: all .5s; 
+    visibility: hidden;
+}
+
+#fichas:hover{
+    opacity: 1;
+    transform: scale(1.3,1.3)
+}
+
+.dinero{
+    width: 40%;
+}
+#fichas{
+    width: 7vw;
+}
+
+.imgRuleta{
+    transition: all 10s;
+    visibility: hidden;
+    margin-top: -2%;
+    background-color: #408840;
+    z-index: 10;
+    position: absolute;
+}
+.img{
+    margin: 35px 30vw;
+    height: 90vh;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Simulador de ruleta / Tablero</title>
+</head>
+
+<body id="body">
+
+    <div class="imgRuleta">
+        <img src="./img/ruleta.png" alt="ruleta" class="img">
+    </div>
+    <div class="card tablero">
+        <div id="tablero" class=" container">
+            <div class="row" id="numeros">
+                <div class="col-1 num numero3"> 3 </div>
+                <div class="col-1 num numero6"> 6 </div>
+                <div class="col-1 num numero9"> 9 </div>
+                <div class="col-1 num numero12"> 12 </div>
+                <div class="col-1 num numero15"> 15 </div>
+                <div class="col-1 num numero18"> 18 </div>
+                <div class="col-1 num numero21"> 21 </div>
+                <div class="col-1 num numero24"> 24 </div>
+                <div class="col-1 num numero27"> 27 </div>
+                <div class="col-1 num numero30"> 30 </div>
+                <div class="col-1 num numero33"> 33 </div>
+                <div class="col-1 num numero36"> 36 </div>
+            </div>
+            <div class="row" id="numeros">
+                <div class="col-1 num numero2"> 2 </div>
+                <div class="col-1 num numero5"> 5 </div>
+                <div class="col-1 num numero8"> 8 </div>
+                <div class="col-1 num numero11"> 11 </div>
+                <div class="col-1 num numero14"> 14 </div>
+                <div class="col-1 num numero17"> 17 </div>
+                <div class="col-1 num numero20"> 20 </div>
+                <div class="col-1 num numero23"> 23 </div>
+                <div class="col-1 num numero26"> 26 </div>
+                <div class="col-1 num numero29"> 29 </div>
+                <div class="col-1 num numero32"> 32 </div>
+                <div class="col-1 num numero35"> 35 </div>
+            </div>
+            <div class="row" id="numeros">
+                <div class="col-1 num numero1"> 1 </div>
+                <div class="col-1 num numero4"> 4 </div>
+                <div class="col-1 num numero7"> 7 </div>
+                <div class="col-1 num numero10"> 10 </div>
+                <div class="col-1 num numero13"> 13 </div>
+                <div class="col-1 num numero16"> 16 </div>
+                <div class="col-1 num numero19"> 19 </div>
+                <div class="col-1 num numero22"> 22 </div>
+                <div class="col-1 num numero25"> 25 </div>
+                <div class="col-1 num numero28"> 28 </div>
+                <div class="col-1 num numero31"> 31 </div>
+                <div class="col-1 num numero34"> 34 </div>
+            </div>
+            <div class="row" id="grupos">
+                <div class="par col-2 grupos "> Par </div>
+                <div class="rojo col-3 grupos "> </div>
+                <div class="numero0 col-2 grupos "> 0 </div>
+                <div class="negro col-3 grupos "> </div>
+                <div class="impar col-2 grupos "> Impar </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row" id="dineroApuesta ">
+                <img class="fAmarillo col-1 mx-auto" src="./img/ficha-amarilla.png" alt="ficha amarilla" id="fichas">
+                <img class="fNegro col-1 mx-auto" src="./img/ficha-negra.png" alt="ficha negra" id="fichas">
+                <div class="input-group mb-3 dinero col-8 mx-1" id="datos">
+                    <input type="text" class=" form-control" placeholder="💲 Ingrese su dinero 💲"
+                        aria-label="Recipient's username" aria-describedby="button-addon2" id="dinero">
+                    <button class="agregarDinero btn btn-warning" type="button"
+                        id="dinero button-addon2">Agregar</button>
+                </div>
+                <img class="fBlanco col-1 mx-auto" src="./img/ficha-blanca.png" alt="ficha blanca" id="fichas">
+                <img class="fRojo col-1 mx-auto" src="./img/ficha-roja.png" alt="ficha roja" id="fichas">
+            </div>
+        </div>
+
+        <div id="buttons btnTablero">
+            <button type="button" class="btn btn-warning btn-lg mx-auto" id="girar">Girar</button>
+        </div>
+    </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="./js/tablero.js"></script>
+    <script src="./js/script2.js"></script>
+
+</body>
+
+</html>
