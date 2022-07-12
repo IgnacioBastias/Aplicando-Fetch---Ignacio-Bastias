@@ -10,6 +10,7 @@ const respuestaClickStart = () => {
 
     localStorage.setItem('nombreUsuario', nombre.value);
     localStorage.setItem('apellidoUsuario', apellido.value);
+
 }
 
 botonStart.addEventListener(`click`, respuestaClickStart);

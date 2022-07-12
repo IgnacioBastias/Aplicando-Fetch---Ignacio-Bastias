@@ -7,6 +7,9 @@ let Opcion1 = 0;
 let Valor = 0;
 let Valor1 = 0;
 let resultado = 0;
+let numeros = [];
+let fichas = [];
+const arrays = "./ajax.json"
 
 // Variables DOM
 
@@ -33,23 +36,23 @@ let subtitulo = document.createElement("h2");
 let nombreUsuario = localStorage.getItem('nombreUsuario');
 let apellidoUsuario = localStorage.getItem('apellidoUsuario');
 
-// Arrays y Objetos 
+// Fetch 
 
-const numeros = [
-    { valores: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36], id: "Total " },
-    { valores: [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36], id: "Rojos" },
-    { valores: [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35], id: "Negros" },
-    { valores: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36], id: "Pares" },
-    { valores: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35], id: "Impares" },
-    { valores: [0], id: "cero" },
-]
+const obtenerNumeros = async () => {
 
-const fichas = [
-    { color: `Amarillo`, valor: 5 },
-    { color: `Rojo`, valor: 1000 },
-    { color: `Negro`, valor: 50 },
-    { color: `Blanco`, valor: 500 },
-]
+    try {
+
+        const respuesta = await fetch(arrays);
+        const resultado = await respuesta.json();
+        numeros = resultado.Numeros;
+        fichas = resultado.Fichas;
+        console.log(numeros)
+        console.log(fichas)
+
+    } catch {
+        alert("error")
+    }
+}
 
 // Funciones
 
@@ -183,6 +186,7 @@ const respuestaAgregarDinero = () => {
     fichaAmarilla.style.visibility = "visible";
     fichaBlanca.style.visibility = "visible";
     fichaNegra.style.visibility = "visible";
+    obtenerNumeros();
 }
 
 const marcarFicha = () => {
