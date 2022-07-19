@@ -16,6 +16,7 @@ const arrays = "./ajax.json"
 const titulo = document.getElementById('titulo');
 const datos = document.getElementById('datos');
 const agregarDinero = document.getElementsByClassName(`agregarDinero`)[0];
+const agregarDineroExtra = document.getElementsByClassName(`agregarDineroExtra`)[0];
 const dinero = document.getElementById(`dinero`)
 const fichaAmarilla = document.getElementsByClassName('fAmarillo')[0];
 const fichaRoja = document.getElementsByClassName('fRojo')[0];
@@ -46,8 +47,6 @@ const obtenerNumeros = async () => {
         const resultado = await respuesta.json();
         numeros = resultado.Numeros;
         fichas = resultado.Fichas;
-        console.log(numeros)
-        console.log(fichas)
 
     } catch {
         alert("error")
@@ -112,15 +111,22 @@ const sinDinero = () => {
     Swal.fire({
         title: '😢 Ganó la Casa 😢',
         text: '👎 Te quedaste sin dinero 👎',
-        confirmButtonText: `<a href="index.html">Reiniciar</a>`,
+        showCancelButton: true,
+        confirmButtonText: `Seguir jugando`,
+        cancelButtonText: `<a href="index.html">Reiniciar</a>`, 
         color: `rgb(250, 235, 215)`,
         background: ' rgba(13, 105, 13)',
     })
+
+    dinero.style.display = 'block';
+    agregarDinero.style.display = 'block';
+    fondo1.innerHTML = ``;
+    datos.append(fondo1);
+
     fichaRoja.style.visibility = "hidden";
     fichaAmarilla.style.visibility = "hidden";
     fichaBlanca.style.visibility = "hidden";
     fichaNegra.style.visibility = "hidden";
-    botonGirar.style.visibility = "hidden";
 }
 
 const ResultadoPleno = () => {
@@ -179,8 +185,8 @@ const respuestaAgregarDinero = () => {
         dinero.style.display = 'none';
         agregarDinero.style.display = 'none';
         fondo1 = document.createElement("h2");
-        fondo1.innerHTML = ` Tu saldo es $ ${saldo} `;
-        datos.append(fondo1);
+        fondo1.innerHTML = ` Tu saldo es $ ${saldo}`;
+        datos.prepend(fondo1);
     }
     fichaRoja.style.visibility = "visible";
     fichaAmarilla.style.visibility = "visible";
@@ -299,17 +305,6 @@ botonGirar.addEventListener(`click`, () => {
         reiniciarApuesta();
     }, 5500);
 });
-
-// ruleta.addEventListener(`transitionend`, () => {
-
-//     ruletaFondo.style.transition = `none`;
-//     ruleta.style.transition = `none`;
-//     ruletaFondo.style.visibility = `hidden`;
-//     ruleta.style.visibility = `hidden`;
-//     const gradosTotal = grados % 360;
-//     ruleta.style.transform = `rotate(${gradosTotal}deg)`;
-//     Girar();
-// })
 
 if (apellidoUsuario != `` && nombreUsuario != ``) {
     Swal.fire({
